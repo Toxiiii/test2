@@ -51,14 +51,41 @@
 
 
 		// 4 取正整数或者取负 + -
-		var num1 = +5;
-		console.log(num1);
+		// var num1 = +5;
+		// console.log(num1);
 
-		var num2 = -5;
-		console.log(num2);
+		// var num2 = -5;
+		// console.log(num2);
 
-		var str = '123';
-		console.log(+str);
+		// var str = '123';
+		// console.log(+str);
+
+		// var isOK = true;
+		// console.log(+isOK);
+
+		// var str = '123';
+		// console.log(str - 0); //执行运算之前先执行字符串
+		// // + 如果又一遍是数值类型 一遍是字符串 会先把数值类型转换成字符串 在进行拼接
+		// console.log(str + 0); //合并拼接，不是运算
+
+		// 5 转换成布尔类型
+		var str = 'abc';
+		var num = 123;
+		var a = null;
+		var b;  //不赋值 默认值为undefined
+
+		console.log(Boolean(str));    //ture
+		console.log(Boolean(num));   //ture
+		console.log(Boolean(a));    //false
+		console.log(Boolean(b));	//false
+
+		//转换成false的情况：null  undefined '' 空字符串  0 NaN 
+
+
+
+
+
+
 	</script>
 </head>
 <body>
