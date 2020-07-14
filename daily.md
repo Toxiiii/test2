@@ -1,8 +1,58 @@
+## 0713
+
+### Symbol 值的强制类型转换？
+
+#### String（）转换
+
+```
+虽然说上面说不可以转换，其实只能转换成'Symbol(uid)'这种形式，想取到'描述内容'需要手动截取'描述内容'
+
+let uid = Symbol.for("uid"), // 创建全局私有属性
+    test = Symbol('呵呵哒'), // 创建局部私有属性
+    desc = String(uid), // 转换成字符串
+    testString = String(test) // 转换成字符串
+
+
+console.log(desc)    // "Symbol(uid)"
+console.log(testString)    // "Symbol(呵呵哒)"
+```
+
+#### 强制类型转换
+
+```
+将'uid'与'空字符串'相连接，会首先要求把'uid'转换为一个'字符串'，而这会引发错误，从而阻止了转换行为。
+
+
+
+let uid = Symbol.for("uid"),
+    desc = uid + ""; // 引发错误！
+```
+
+#### Symbol转换成数字
+
+```
+相似地，你不能将'Symbol'转换为数值，对'Symbol'使用所有数学运算符都会引发错误，例如：
+
+
+
+let uid = Symbol.for("uid"),
+    sum = uid / 1; // 引发错误！
+
+
+
+此例试图把'Symbol'除以 1 ，同样引发了错误。无论对'Symbol'使用哪种数学运算符都会'导致错误'，但使用
+
+逻辑运算符则不会，因为'Symbol'在'逻辑运算中会被认为等价于true'（就像 JS 中其他的非空值那样）。
+```
+
+
+
 ##0712
+
 ###1. 什么情况下会发生布尔值的隐式强制类型转换？
 1. 数字运算：
 `​“＋”：将表达式的值转换为String（仅当有一个是String类型）；<br />“－”：将表达式的值转换为Number;`
-2. ​“.”
+2. “.”
   被隐式转换为对象；
 
 3. “if语句”
@@ -952,7 +1002,7 @@ line-height不指定的话结果是设计师指定的字体行高。
                 .clearfix {
                     *zoom: 1;
                 }
-    
+
 
 4、SASS编译的时候，浮动元素的父级div定义伪类:after
 
@@ -963,7 +1013,7 @@ line-height不指定的话结果是设计师指定的字体行高。
                     height: 0;
                     clear: both;
                 }
-    
+
 
 解析原理：
 
@@ -1293,7 +1343,7 @@ wrap块为窗口可看到的部分，我们可以通过js获取窗口可视区�
         width:100%;
         margin:0;
     }
-    
+
 
 js代码的主要部分就是对滚动事件的函数绑定，大多数浏览器提供了mousewheel事件，Firefox 3.5+不支持，但支持相同作用的事件：DOMMouseScroll;
 mousewheel事件：event.wheelDelta 返回的如果时正值说明滚轮是向上滚动的；
@@ -1337,7 +1387,7 @@ DOMMouseScroll事件：event.detail 返回的如果时负值说明滚轮是向�
             event.preventDafault();
         }
     }
-    
+
 
 
 
@@ -1354,7 +1404,6 @@ DOMMouseScroll事件：event.detail 返回的如果时负值说明滚轮是向�
 响应式设计的基本原理是通过媒体查询检测不同的设备屏幕尺寸做处理。页面头部必须有meta声明viewport：
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no”>
-
 ---
 
 
