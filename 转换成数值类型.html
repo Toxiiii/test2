@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// 1 Number()
+		// var str = 'abc';     //Number(str) > NaN
+		// var isRight = true;    //Number(isRight)  > 1
+
+		// console.log(Number(str));
+		// console.log(Number(isRight));
+
+		// console.log(Number('123'));
+		// // Number()把字符串转换成数值类型的时候，如果字符串中有一个不是数字，就返回NaN
+		// console.log(Number('123abc'))
+
+		// 2 parseInt()  int 整数的意思
+		// var str = '123';
+		// var isRight = false;
+
+
+		// console.log(parseInt(str));
+		// // parseInt 无法把布尔类型转换成数值类型，返回的结果是NaN
+		// console.log(parseInt(isRight));
+
+		// // var s1 ='abc';  //paseInt > NaN
+
+		// var s1 = '123abc';
+		// // parseInt 在转换字符串的时候，如果遇到数字就会转换数字，如果遇到非数字就会返回
+
+		// var s2 = 'abc123';
+		// // 如果字符串中的第一个字符是非数字，此时返回NaN
+		// console.log(parseInt(s1));
+		// console.log(parseInt(s2));
+
+		// 3 parseFloat() 方法
+		// var str = '123.67';
+		// var isRight = true;
+		// console.log(parseFloat(str));   //转换数值加小数
+		// console.log(parseFloat(isRight));  //parseFloat也无法转换布尔类型 返回是NaN
+		// console.log(parseInt(str));   //转换成整数
+
+		// var str = '123.12.123abc';
+
+		// console.log(parseFloat(str));  
+
+		// var str = '123abc';
+
+		// console.log(parseFloat(str));  
+
+
+		// 4 取正整数或者取负 + -
+		var num1 = +5;
+		console.log(num1);
+
+		var num2 = -5;
+		console.log(num2);
+
+		var str = '123';
+		console.log(+str);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
