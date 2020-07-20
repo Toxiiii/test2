@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function avg() {
+            var avg=0;
+            for (var i = 0; i < arguments.length; i++ ) {
+               //所有的成绩之和
+               avg += Number(arguments[i]);
+            }
+            return avg / arguments.length;
+         }
+         alert('平均分数是'+avg(50,60,70,80,90,90));
+
+	</script>
+</body>
+</html>
